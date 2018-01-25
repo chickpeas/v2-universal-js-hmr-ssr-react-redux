@@ -1,8 +1,8 @@
-import {fromJS, Map as iMap} from 'immutable';
+import { fromJS, Map as iMap } from 'immutable';
 import { push, replace } from 'react-router-redux';
 
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT';
-export const COUNTER_DECREMENT  = 'COUNTER_DECREMENT';
+export const COUNTER_DECREMENT = 'COUNTER_DECREMENT';
 
 const initialState = iMap({
   count: 0
@@ -24,13 +24,13 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 
-export function incrementCount( ) {
+export function incrementCount() {
   return {
     type: COUNTER_INCREMENT
   };
 }
 
-export function decrementCount( ) {
+export function decrementCount() {
   return {
     type: COUNTER_DECREMENT
   };

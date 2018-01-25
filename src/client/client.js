@@ -13,17 +13,17 @@ import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
 const store = createStore(history);
 
-const rootEl = document.getElementById('root')
+const rootEl = document.getElementById('root');
 const renderApp = (Component) => {
-    render(
-      <AppContainer>
-        <Provider store={store}>
-          <Component history={history} />
-        </Provider>
-      </AppContainer>,
-      rootEl
-    );
-}
+  render(
+    <AppContainer>
+      <Provider store={store}>
+        <Component history={history} />
+      </Provider>
+    </AppContainer>,
+    rootEl
+  );
+};
 
 renderApp(App);
 

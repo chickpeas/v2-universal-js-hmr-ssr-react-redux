@@ -23,17 +23,17 @@ export default (history) => {
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
-     module.hot.accept('./reducers', () => {
-       const nextReducers = require('./reducers/index.js');
-       const rootReducer = combineReducers({
-         ...nextReducers,
-         router: routerReducer
-       });
+    module.hot.accept('./reducers', () => {
+      const nextReducers = require('./reducers/index.js');
+      const rootReducer = combineReducers({
+        ...nextReducers,
+        router: routerReducer
+      });
 
-       store.replaceReducer(rootReducer);
-     });
-   }
+      store.replaceReducer(rootReducer);
+    });
+  }
 
 
   return store;
-}
+};

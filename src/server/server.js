@@ -1,6 +1,6 @@
-import http    from 'http';
+import http from 'http';
 import express from 'express';
-import path    from 'path';
+import path from 'path';
 
 // Server Side Rendering
 import {
@@ -23,29 +23,29 @@ if (PROD) {
 }
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // development error handler
 if (!PROD) {
-  app.use(function(err, req, res, next) {
-    console.error('error : ', err)
+  app.use((err, req, res, next) => {
+    console.error('error : ', err);
     res.status(err.status || 500);
   });
 }
 
 // production error handler
-app.use(function(err, req, res, next) {
-  console.error('error : ', err.message)
+app.use((err, req, res, next) => {
+  console.error('error : ', err.message);
   res.status(err.status || 500);
 });
 
 const server = http.createServer(app);
 
-server.listen(8080, function() {
-   const address = server.address();
-   console.log(`Listening on: localhost::${address.port}`);
- });
+server.listen(8080, () => {
+  const address = server.address();
+  console.log(`Listening on: localhost::${address.port}`);
+});

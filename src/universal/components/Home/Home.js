@@ -1,10 +1,10 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Home.scss';
 
 class Home extends Component {
-  render () {
+  render() {
     return (
       <div className={styles.home}>
         <h1 className={styles.title}>⚡ Universal JS, HMR and SSR ⚡</h1>
@@ -56,7 +56,7 @@ class Home extends Component {
 
 
         <div className={styles.center}>
-          <Link className={styles.button} to='/counter'>Go to App</Link>
+          <Link className={styles.button} to="/counter">Go to App</Link>
         </div>
       </div>
     );

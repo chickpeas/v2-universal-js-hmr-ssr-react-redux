@@ -1,5 +1,5 @@
 // Libraries
-import React, {Component, PropTypes} from  'react';
+import React, { Component, PropTypes } from 'react';
 import { Route, Redirect } from 'react-router';
 
 // Routes
@@ -14,7 +14,7 @@ import AppContainer from 'universal/containers/App/AppContainer.js';
 // import PrivateRouteContainer from 'universal/containers/PrivateRoute/PrivateRouteContainer.js';
 
 class Routes extends Component {
-  render () {
+  render() {
     const {
       location
     } = this.props;
@@ -22,8 +22,8 @@ class Routes extends Component {
     return (
       <AppContainer>
         <div>
-          <Route exact location={location} path='/' component={RouteMap.Home} />
-          <Route exact location={location} path='/counter' component={RouteMap.Counter} />
+          <Route exact location={location} path="/" component={RouteMap.Home} />
+          <Route exact location={location} path="/counter" component={RouteMap.Counter} />
         </div>
       </AppContainer>
     );
