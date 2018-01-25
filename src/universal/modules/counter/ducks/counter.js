@@ -1,5 +1,5 @@
 import {fromJS, Map as iMap} from 'immutable';
-import {push, replace} from 'react-router-redux';
+import { push, replace } from 'react-router-redux';
 
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT';
 export const COUNTER_DECREMENT  = 'COUNTER_DECREMENT';

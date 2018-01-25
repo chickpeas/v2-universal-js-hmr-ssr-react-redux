@@ -1,13 +1,13 @@
 // Node Modules
 import fs from 'fs';
-import {basename, join} from 'path';
+import { basename, join } from 'path';
 
 // Libraries
 import React from 'react';
-import {renderToString} from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 
 // Redux
-// import {push} from 'react-router-redux';
+// import { push } from 'react-router-redux';
 import createStore from 'universal/redux/createStore.js';
 import createHistory from 'history/createMemoryHistory'
 

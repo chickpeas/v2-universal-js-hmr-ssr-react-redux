@@ -1,7 +1,7 @@
 // Libraries
 import React, {Component, PropTypes} from 'react';
-import {StaticRouter} from 'react-router';
-import {renderToString} from 'react-dom/server';
+import { StaticRouter } from 'react-router';
+import { renderToString } from 'react-dom/server';
 
 // Redux
 import { Provider } from 'react-redux';

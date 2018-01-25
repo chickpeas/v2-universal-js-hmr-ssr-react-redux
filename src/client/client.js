@@ -1,13 +1,13 @@
 import React from 'react';
-import {render} from 'react-dom';
-import {AppContainer} from 'react-hot-loader';
+import { render } from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
 // Components
 import App from './containers/AppContainer.js';
 
 // Redux
 import { Provider } from 'react-redux';
-import createStore from '../universal/redux/createStore.js';
+import createStore from '../universal/redux/createStore';
 import createHistory from 'history/createBrowserHistory';
 
 const history = createHistory();
