@@ -3,9 +3,9 @@ import webpack from 'webpack';
 import qs from 'querystring';
 
 const root = process.cwd();
-const src  = path.join(root, 'src');
+const src = path.join(root, 'src');
 
-const clientSrc    = path.join(src, 'client');
+const clientSrc = path.join(src, 'client');
 const universalSrc = path.join(src, 'universal');
 
 const clientInclude = [clientSrc, universalSrc];
@@ -55,7 +55,8 @@ export default {
   },
   module: {
     loaders: [
-      {test: /\.(png|j|jpeg|gif|svg|woff|woff2)$/,
+      {
+        test: /\.(png|j|jpeg|gif|svg|woff|woff2)$/,
         use: {
           loader: 'url-loader',
           options: {
@@ -65,25 +66,30 @@ export default {
       },
 
       // Javascript
-      {test: /\.js$/,
-       loader: 'babel-loader',
-       query: babelQuery,
-       include: clientInclude
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: babelQuery,
+        include: clientInclude
       },
 
       // CSS
-      {test: /\.css$/,
-       include: clientInclude,
-       use: [
-         {loader: 'style-loader'},
-         {loader: 'css-loader',
-          options: {
-            root: src,
-            modules: true,
-            importLoaders: 1,
-            localIdentName: '[name]_[local]_[hash:base64:5]'
-          }}
-       ]
+      {
+        test: /\.s?css$/,
+        include: clientInclude,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              root: src,
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]_[local]_[hash:base64:5]'
+            }
+          },
+          { loader: 'sass-loader' }
+        ]
       }
     ]
   }

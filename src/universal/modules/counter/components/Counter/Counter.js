@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import styles from './Counter.css';
+import styles from './Counter.scss';
 import classNames from 'classnames';
 
 class Counter extends Component {

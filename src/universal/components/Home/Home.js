@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import styles from './Home.css';
+import styles from './Home.scss';
 
 class Home extends Component {
   render () {

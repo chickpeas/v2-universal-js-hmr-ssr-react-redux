@@ -5,7 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 // Paths
 const root = process.cwd();
-const src  = path.join(root, 'src');
+const src = path.join(root, 'src');
 const build = path.join(root, 'build');
 const universal = path.join(src, 'universal');
 const server = path.join(src, 'server');
@@ -52,19 +52,23 @@ export default {
       },
 
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         include: serverInclude,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            {loader: 'css-loader',
-             options: {
-               root: src,
-               modules: true,
-               importLoaders: 1,
-               localIdentName: '[name]_[local]_[hash:base64:5]'
-             }}
-          ]})
+            {
+              loader: 'css-loader',
+              options: {
+                root: src,
+                modules: true,
+                importLoaders: 1,
+                localIdentName: '[name]_[local]_[hash:base64:5]'
+              }
+            },
+            { loader: 'sass-loader' }
+          ]
+        })
       },
 
       {

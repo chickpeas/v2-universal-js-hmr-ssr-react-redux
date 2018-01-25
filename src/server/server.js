@@ -1,6 +1,5 @@
 import http    from 'http';
 import express from 'express';
-import colors  from 'colors';
 import path    from 'path';
 
 // Server Side Rendering
@@ -48,5 +47,5 @@ const server = http.createServer(app);
 
 server.listen(8080, function() {
    const address = server.address();
-   console.log(`${'>>>'.cyan} ${'Listening on:'.rainbow} ${'localhost::'.trap.magenta}${`${address.port}`.green}`);
+   console.log(`Listening on: localhost::${address.port}`);
  });
