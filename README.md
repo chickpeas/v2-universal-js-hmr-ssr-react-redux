@@ -1,4 +1,8 @@
+#UPDATED WEBPACK TO 3.8.1
+#ADD ESLINT AIRBNB AND SCSS
+
 # ⚡ (V2) Universal JS - Server Side Rendering, Code Splitting and Hot Module Reloading ⚡
+
 
 ## 💭 What is it?
 *Universal JS: -*
@@ -35,7 +39,7 @@ the following technologies:
 - React
 - Redux
 - React Router 4
-- Webpack 2
+- ~~~Webpack 2~~~
 - Hot Module Reloader 3
 - Babel
 - Express
