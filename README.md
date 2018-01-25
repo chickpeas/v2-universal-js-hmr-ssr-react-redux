@@ -1,5 +1,5 @@
-#UPDATED WEBPACK TO 3.8.1
-#ADD ESLINT AIRBNB AND SCSS
+## Updated WEBPACK to 3.8.1
+## Add ESLINT AIRBNB and SCSS
 
 # ⚡ (V2) Universal JS - Server Side Rendering, Code Splitting and Hot Module Reloading ⚡
 
